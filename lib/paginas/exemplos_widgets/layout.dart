@@ -12,7 +12,7 @@ class MinhaApp extends StatelessWidget{
 }*/
 
 //Exemplo 2: Layout para aplicativo Material
-/*void main(){
+void main(){
   runApp(MinhaApp());
 }
 
@@ -26,4 +26,4 @@ class MinhaApp extends StatelessWidget{
         )
     );
   }
-}*/
+}

@@ -85,6 +85,7 @@ class MinhaWidget extends StatelessWidget{
   }
 }*/
 
+
 //Exemplo 8 - icones e disposição do código em Dart
 /*void main(){
   runApp(MinhaWidget());
