@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 //Exemplo 1 - container
-/*void main(){
+void main(){
   runApp(Container(color: Color(0xFFFF00FF)));
-}*/
+}
 
 //Exemplo 2 - saida de dados (Text)
 /*void main(){
@@ -145,30 +145,6 @@ class MinhaWidget extends StatelessWidget{
   );
 }*/
 
-//Exemplo 11 - botoes
-/*void main(){
-  runApp(MinhaWidget());
-}
-
-class MinhaWidget extends StatelessWidget{
-  Widget build(BuildContext bc){
-    return MaterialApp(
-      title: "Ola Mundo!",
-      home:
-        Scaffold(
-          appBar: AppBar(title: Text("Ola")),
-          body:
-            Center(
-              child:
-                IconButton(
-                  icon: Icon(Icons.add_a_photo),
-                  onPressed: (){print("Pressionado!");}
-                )
-            )
-        )
-    );
-  }
-}*/
 
 
 
