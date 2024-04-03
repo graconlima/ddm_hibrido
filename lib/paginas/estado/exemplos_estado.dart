@@ -163,7 +163,7 @@ class AtualizadorTextoEstado extends State{
   }
 }*/
 
-//Exemplo 3: Slider
+//Exemplo 4: Slider
 void main() {
   runApp(MinhaApp());
 }
