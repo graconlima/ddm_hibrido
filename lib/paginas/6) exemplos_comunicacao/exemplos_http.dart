@@ -38,7 +38,7 @@ void main() async {
 }*/
 
 //Exemplo 4 - convertendo a Resposta HTTP em Objeto Dart
-import 'dart:convert';
+/*import 'dart:convert';
 void main() async {
   var resposta = await http.get(Uri.https("jsonplaceholder.typicode.com", "albums/1"));
   var meuAlbum = MeuAlbum.converterJson(jsonDecode(resposta.body));
@@ -57,4 +57,4 @@ class MeuAlbum{
   factory MeuAlbum.converterJson(Map<String, dynamic> dadosJSON){
     return MeuAlbum(id: dadosJSON['id'], idUsuario: dadosJSON['userId'], titulo: dadosJSON['title']);
   }
-}
+}*/
