@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 //Exemplo 1: clique simples
 /*main(){
   runApp(Container(
@@ -71,8 +69,8 @@ class MinhaApp extends StatelessWidget{
   }
 }*/
 
-//Exemplo 6: deslizar com dois alertas
-/*void main(){
+//Exemplo 6: deslizar com dois alertas, clique secundário e terciário, e detalhes
+void main(){
   runApp(MaterialApp(home: MinhaApp()));
 }
 
@@ -81,19 +79,45 @@ class MinhaApp extends StatelessWidget{
     return Scaffold(
         appBar: AppBar(title: Text("Ola")),
         body: Center(child: GestureDetector(
-            onHorizontalDragStart: (DragStartDetails dsd){
-              exibirInformacao(bc, "Posicao de inicio de arrasto horizontal: "+dsd.toString());
-            },
-            onHorizontalDragEnd: (DragEndDetails ded){
-              exibirInformacao(bc, "Posicao de fim de arrasto horizontal: "+ded.toString());
-            },
-            onVerticalDragStart: (DragStartDetails dsd){
-              exibirInformacao(bc, "Posicao de inicio de arrasto vertical: "+dsd.toString());
-            },
-            onVerticalDragEnd: (DragEndDetails ded){
-              exibirInformacao(bc, "Posicao de fim de arrasto vertical: "+ded.toString());
-            },
-            child: Text("Ola Mundo")))
+          onSecondaryTap: () {
+           print("clique segundo bt!");
+          },
+          onTertiaryTapDown: (TapDownDetails tdd) {
+            print("clique bt central");
+          },
+          onHorizontalDragStart: (DragStartDetails dsd){
+            var s = "${dsd.globalPosition}, "
+                "${dsd.kind}, "
+                "${dsd.localPosition}, "
+                "${dsd.sourceTimeStamp}, "
+                "${dsd.hashCode}, "
+                "${dsd.runtimeType}";
+            exibirInformacao(bc, "Posicao de inicio de arrasto horizontal: "+s);
+          },
+          onHorizontalDragEnd: (DragEndDetails ded){
+            var s = "${ded.primaryVelocity}, "
+                "${ded.velocity}, "
+                "${ded.runtimeType}, "
+                "${ded.hashCode}";
+            exibirInformacao(bc, "Posicao de fim de arrasto horizontal: "+s);
+          },
+          onVerticalDragStart: (DragStartDetails dsd){
+            var s = "${dsd.globalPosition}, "
+                "${dsd.kind}, "
+                "${dsd.localPosition}, "
+                "${dsd.sourceTimeStamp}, "
+                "${dsd.hashCode}, "
+                "${dsd.runtimeType}";
+            exibirInformacao(bc, "Posicao de inicio de arrasto vertical: "+s);
+          },
+          onVerticalDragEnd: (DragEndDetails ded){
+            var s = "${ded.primaryVelocity}, "
+                "${ded.velocity}, "
+                "${ded.runtimeType}, "
+                "${ded.hashCode}";
+            exibirInformacao(bc, "Posicao de fim de arrasto vertical: $s");
+          },
+          child: Text("Ola Mundo")))
     );
   }
 
@@ -101,4 +125,4 @@ class MinhaApp extends StatelessWidget{
     var alerta = AlertDialog(title: Text("Informacao"), content: Text(informacao));
     showDialog(context: bc, builder: (bc){return alerta;});
   }
-}*/
+}

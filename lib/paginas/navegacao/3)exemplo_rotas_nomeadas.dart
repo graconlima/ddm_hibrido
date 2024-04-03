@@ -43,7 +43,7 @@ class SegundaTela extends StatelessWidget{
 
 
 //Exemplo 2 - rotas nomeadas com passagem de parametros
-/*void main(){
+void main(){
   runApp(MaterialApp(
     initialRoute: "/",
     routes: {
@@ -89,4 +89,4 @@ class SegundaTela extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(body: Center(child: FloatingActionButton(child: Text("Voltar 2"), onPressed: (){Navigator.pop(context);})));
   }
-}*/
+}
