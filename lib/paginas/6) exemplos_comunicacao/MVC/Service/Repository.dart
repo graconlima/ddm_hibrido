@@ -8,6 +8,6 @@ class AlbumRepository{
   AlbumRepository({required this.adp}) : assert (adp != null);
 
   Future<Album> getAlbum(int album) async{
-    return await adp.getAlbum(album);
+    return await adp.get(album);
   }
 }

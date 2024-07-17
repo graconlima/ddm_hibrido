@@ -4,8 +4,8 @@ import 'package:ddm_hibrido/paginas/6)%20exemplos_comunicacao/MVC/Model/Album.da
 abstract class AbstractDataProvider{
 
   //Varios Albuns
-  //Future<List<Album>> getAlbum();
+  //Future<List<Album>> get();
 
   //Um Album
-  Future<Album> getAlbum(int album);//nao pode fal
+  Future<Album> get(int album);//nao pode fal
 }
